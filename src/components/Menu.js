@@ -20,10 +20,10 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 const Container = styled.div`
   flex: 1;
-  background-color: #202020;
-  height: 100%;
+  background-color: ${({ theme }) => theme.bg};
+ max-height: 100%;
   font-size: 14px;
-  color: white;
+  color: ${({ theme }) => theme.text}
   position: sticky;
   top: 0;
 `;
@@ -55,7 +55,7 @@ const Item = styled.div`
 
 const Hr = styled.hr`
   margin: 15px 0px;
-  border: 0.5px solid #373737;
+  border: 0.5px solid ${({ theme }) => theme.soft};
 `;
 
 const Login = styled.div``;
@@ -71,7 +71,14 @@ const Button = styled.button`
   align-items: center;
   gap: 5px;
 `;
-const Menu = () => {
+
+const Title = styled.h2`
+  font-size: 14px;
+  font-weight: 500;
+  color: #aaaaaa;
+  margin-bottom: 20px;
+`;
+const Menu = ({ darkMode, setDarkMode }) => {
   return (
     <Container>
       <Wrapper>
@@ -95,14 +102,6 @@ const Menu = () => {
         </Item>
         <Hr />
 
-        <Login>
-          Sign in to like videos,comment and subscribe.
-          <Button>
-            <AccountCircleIcon />
-            Sign In
-          </Button>
-        </Login>
-        <Hr />
         <Item>
           <VideoLibraryIcon />
           Library
@@ -113,6 +112,16 @@ const Menu = () => {
           History
         </Item>
         <Hr />
+
+        <Login>
+          Sign in to like videos,comment and subscribe.
+          <Button>
+            <AccountCircleIcon />
+            Sign In
+          </Button>
+        </Login>
+        <Hr />
+        <Title>Best of VidTube</Title>
         <Item>
           <LibraryMusicIcon />
           Music
@@ -158,7 +167,7 @@ const Menu = () => {
           Help
         </Item>
 
-        <Item>
+        <Item onClick={() => setDarkMode(!darkMode)}>
           <SettingsBrightnessIcon />
           Light Mode
         </Item>
