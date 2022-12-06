@@ -6,6 +6,7 @@ import {
 } from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
+import Comments from "../components/Comments";
 
 const Container = styled.div`
   display: flex;
@@ -140,7 +141,7 @@ const Video = () => {
 
         <Channel>
           <ChannelInfo>
-            <Image></Image>
+            <Image src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Wallpapers-pexels-photo.jpg"></Image>
             <ChannelDetail>
               <ChannelName>Namit Malasi</ChannelName>
               <ChannelCounter>200K subscriber</ChannelCounter>
@@ -157,6 +158,9 @@ const Video = () => {
           </ChannelInfo>
           <Subscribe>Subscribe</Subscribe>
         </Channel>
+
+        <Hr />
+        <Comments />
       </Content>
       <Recommended>recommendation</Recommended>
     </Container>
