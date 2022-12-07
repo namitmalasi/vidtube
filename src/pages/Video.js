@@ -6,6 +6,7 @@ import {
 } from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
+import Card from "../components/Card";
 import Comments from "../components/Comments";
 
 const Container = styled.div`
@@ -162,7 +163,14 @@ const Video = () => {
         <Hr />
         <Comments />
       </Content>
-      <Recommended>recommendation</Recommended>
+      <Recommended>
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+      </Recommended>
     </Container>
   );
 };
