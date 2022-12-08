@@ -121,10 +121,12 @@ const Menu = ({ darkMode, setDarkMode }) => {
 
         <Login>
           Sign in to like videos,comment and subscribe.
-          <Button>
-            <AccountCircleIcon />
-            Sign In
-          </Button>
+          <Link to="signin" style={{ textDecoration: "none" }}>
+            <Button>
+              <AccountCircleIcon />
+              Sign In
+            </Button>
+          </Link>
         </Login>
         <Hr />
         <Title>Best of VidTube</Title>
